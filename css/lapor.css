@@ -1,0 +1,275 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins,sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #667eea;
+    background-image: linear-gradient(91deg, #667eea 0%, #764ba2 100%);
+}
+
+/* <----------------------------------------- NAVBAR -----------------------------------------> */
+
+
+header {
+    background: #404040;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+}
+
+.logo {
+    margin-left: 120px;
+    cursor: pointer;
+    transition: all .5s ease 0s;
+}
+.logo:hover {
+    color: rgb(255, 255, 255);
+}
+
+.btn-logreg {
+    margin-right: 100px;
+    transition: all .5 ease;
+}
+.intro {
+    display: flex;
+    padding: 30px 40px;
+    border-radius: 8px;
+    transition: all .5 ease;
+    background: linear-gradient(to right, #ff6600, #ff9b4f);
+}
+
+.gambar {
+    width: 500px;
+    text-align: right;
+    margin-top: -44px;
+    margin-left: 20px;
+
+}
+
+.toggle-btn {
+    color: #143d59;
+    font-size: 1.8rem;
+    display: none;
+    cursor: pointer;
+}
+
+.logreg {
+    margin: 0px 7px;
+    color: #f4b41a;
+    border: none;
+    background-color: #143d59;
+    padding: 9px 14px;
+    border-radius: 10px;
+    transition: all .5s ease 0s;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.logreg:hover {
+    background-color: #eaf890;
+    color: #143d59;
+}
+
+
+.navbar {
+    padding: 20px;
+}
+
+.navbar a {
+    position: relative;
+    transition: all .5s ease;
+    padding: 0px 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:before {
+    
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    height: 4px;
+    width: 0;
+    background: #bc79fb;
+    border-radius: 50px;
+    transition: width .3s ease;
+}
+
+.navbar a:hover:before {
+    width: 80%;
+}
+.container {
+    max-width: 1400px;
+    margin: 0px auto;
+    margin-top: 190px;
+}
+
+.title {
+    font-weight: 500;
+    color: white;
+}
+.dropdown-menu {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    top: 67px;
+    width: 100%;
+    height: 0;
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+    background: #333333;
+    flex-direction: column;
+    text-align: center;
+    transition: height .5s ease;
+    /* border: 1px solid black; */
+}
+
+.dropdown-menu.open {
+    height: 300px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: #ebebeb;
+    font-weight: 600;
+
+}
+
+@media screen and (max-width: 1071px) {
+    .btn-logreg {
+        margin-right: 40px;
+    }
+    .logo {
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width: 941px) {
+    .logo {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .navbar {
+        display: none;
+    }
+    .logreg {
+        display: none;
+    }
+    .toggle-btn {
+        color: white;
+        display: block;
+        margin-right: 35px;
+    }
+    .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 942px) {
+    .toggle-btn {
+        display: none;
+    }
+    .dropdown-menu {
+        display: none;
+    }
+
+}
+
+/* <----------------------------------------- FORMULIR -----------------------------------------> */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kotak {
+    background: rgb(233, 233, 233);
+    width: 450px;
+    height: 600px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    text-align: center;
+    padding: 40px 50px;
+    transition: padding .5s ease;
+}
+
+.title {
+    color: #333333;
+}
+
+.input-form {
+    margin: 20px 0px;
+}
+
+.input-form input {
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: #e8e8e8;
+}
+
+.input-form textarea {
+    transition: width .5s ease;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: #e8e8e8;
+    resize: none;
+}
+.input-form select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.5em;
+    appearance: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.submit {
+    text-align: right;
+}
+
+.submit button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #e8e8e8;
+    font-weight: 600;
+    font-size: 17px;
+    background: linear-gradient(to right, #EB3349, #F45C43);
+    transition: all .5s ease;
+}
+
+.submit button:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+@media screen and (max-width: 448px) {
+    .kotak {
+        padding: 30px 10px;
+    }
+    .input-form textarea {
+        width: 100%;
+    }
+}
